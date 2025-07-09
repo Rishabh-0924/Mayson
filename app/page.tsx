@@ -1,25 +1,31 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import type React from "react"
-import Link from "next/link"
-import { Shield, ArrowRight, FileText, Package } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { useEffect, useState } from "react";
+import type React from "react";
+import Link from "next/link";
+import { Shield, ArrowRight, FileText, Package } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export default function HomePage() {
-  const [scrollY, setScrollY] = useState(0)
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY)
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleLogoClick = (e: React.MouseEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Remove admin panel access - logo click does nothing now
-  }
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -87,9 +93,12 @@ export default function HomePage() {
       <header className="bg-black shadow-sm fixed top-0 left-0 right-0 z-50 backdrop-blur-sm bg-opacity-95">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2 select-none" onClick={handleLogoClick}>
+            <div
+              className="flex items-center space-x-2 select-none"
+              onClick={handleLogoClick}
+            >
               <Shield className="h-8 w-8 text-white" />
-              <h1 className="text-2xl font-bold text-white">MAYSON</h1>
+              <h1 className="text-2xl font-bold text-white">MASON</h1>
             </div>
             <nav className="hidden md:flex space-x-8">
               <a
@@ -104,7 +113,10 @@ export default function HomePage() {
               >
                 Warranty
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-all duration-300 hover:scale-105">
+              <a
+                href="#"
+                className="text-gray-300 hover:text-white transition-all duration-300 hover:scale-105"
+              >
                 Support
               </a>
             </nav>
@@ -128,8 +140,8 @@ export default function HomePage() {
               <span className="block text-blue-600">With Ease</span>
             </h2>
             <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
-              Protect your product with our comprehensive warranty system. Set up your warranty on day one and claim it
-              when you need support.
+              Protect your product with our comprehensive warranty system. Set
+              up your warranty on day one and claim it when you need support.
             </p>
           </div>
         </section>
@@ -140,9 +152,12 @@ export default function HomePage() {
 
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">Warranty Services</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                Warranty Services
+              </h3>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Protect your investment with our comprehensive warranty coverage and easy claim process.
+                Protect your investment with our comprehensive warranty coverage
+                and easy claim process.
               </p>
             </div>
 
@@ -154,9 +169,12 @@ export default function HomePage() {
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110">
                     <Shield className="h-6 w-6 text-blue-600" />
                   </div>
-                  <CardTitle className="text-2xl font-bold text-gray-900">Setup Warranty</CardTitle>
+                  <CardTitle className="text-2xl font-bold text-gray-900">
+                    Setup Warranty
+                  </CardTitle>
                   <CardDescription className="text-gray-600">
-                    Register your product warranty on day 1 of purchase. Get 6 months of comprehensive coverage.
+                    Register your product warranty on day 1 of purchase. Get 6
+                    months of comprehensive coverage.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="pt-4 relative z-10">
@@ -190,10 +208,12 @@ export default function HomePage() {
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110">
                     <FileText className="h-6 w-6 text-green-600" />
                   </div>
-                  <CardTitle className="text-2xl font-bold text-gray-900">Claim Warranty</CardTitle>
+                  <CardTitle className="text-2xl font-bold text-gray-900">
+                    Claim Warranty
+                  </CardTitle>
                   <CardDescription className="text-gray-600">
-                    Having issues with your product? Submit a warranty claim with your order details and problem
-                    description.
+                    Having issues with your product? Submit a warranty claim
+                    with your order details and problem description.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="pt-4 relative z-10">
@@ -232,10 +252,12 @@ export default function HomePage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">Why Choose MAYSON?</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                Why Choose MAYSON?
+              </h3>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                We're committed to providing premium quality products with exceptional warranty coverage and customer
-                service.
+                We're committed to providing premium quality products with
+                exceptional warranty coverage and customer service.
               </p>
             </div>
             <div className="grid md:grid-cols-4 gap-8">
@@ -243,32 +265,48 @@ export default function HomePage() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-blue-200 transition-colors duration-300">
                   <Package className="h-8 w-8 text-blue-600" />
                 </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">Premium Quality</h4>
-                <p className="text-gray-600">High-quality materials and advanced technology in every product.</p>
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                  Premium Quality
+                </h4>
+                <p className="text-gray-600">
+                  High-quality materials and advanced technology in every
+                  product.
+                </p>
               </div>
               <div className="text-center hover:scale-105 transition-transform duration-300">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-green-200 transition-colors duration-300">
                   <Shield className="h-8 w-8 text-green-600" />
                 </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">6 Month Warranty</h4>
-                <p className="text-gray-600">Comprehensive warranty coverage for 6 months from your purchase date.</p>
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                  6 Month Warranty
+                </h4>
+                <p className="text-gray-600">
+                  Comprehensive warranty coverage for 6 months from your
+                  purchase date.
+                </p>
               </div>
               <div className="text-center hover:scale-105 transition-transform duration-300">
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-purple-200 transition-colors duration-300">
                   <FileText className="h-8 w-8 text-purple-600" />
                 </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">Easy Claims</h4>
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                  Easy Claims
+                </h4>
                 <p className="text-gray-600">
-                  Simple and straightforward warranty claim process with quick resolution.
+                  Simple and straightforward warranty claim process with quick
+                  resolution.
                 </p>
               </div>
               <div className="text-center hover:scale-105 transition-transform duration-300">
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-orange-200 transition-colors duration-300">
                   <ArrowRight className="h-8 w-8 text-orange-600" />
                 </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">Fast Support</h4>
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                  Fast Support
+                </h4>
                 <p className="text-gray-600">
-                  Quick customer support and warranty processing to get you back up and running.
+                  Quick customer support and warranty processing to get you back
+                  up and running.
                 </p>
               </div>
             </div>
@@ -298,24 +336,34 @@ export default function HomePage() {
                   <span className="text-xl font-bold">MAYSON</span>
                 </div>
                 <p className="text-gray-400">
-                  Premium home appliances with reliable warranty support and exceptional customer service.
+                  Premium home appliances with reliable warranty support and
+                  exceptional customer service.
                 </p>
               </div>
               <div>
                 <h5 className="font-semibold mb-4">Products</h5>
                 <ul className="space-y-2 text-gray-400">
                   <li>
-                    <a href="#" className="hover:text-white transition-all duration-300 hover:translate-x-1">
+                    <a
+                      href="#"
+                      className="hover:text-white transition-all duration-300 hover:translate-x-1"
+                    >
                       Vacuum Sealer
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-all duration-300 hover:translate-x-1">
+                    <a
+                      href="#"
+                      className="hover:text-white transition-all duration-300 hover:translate-x-1"
+                    >
                       Lint Remover
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-all duration-300 hover:translate-x-1">
+                    <a
+                      href="#"
+                      className="hover:text-white transition-all duration-300 hover:translate-x-1"
+                    >
                       Coffee Maker
                     </a>
                   </li>
@@ -325,17 +373,26 @@ export default function HomePage() {
                 <h5 className="font-semibold mb-4">Support</h5>
                 <ul className="space-y-2 text-gray-400">
                   <li>
-                    <a href="#" className="hover:text-white transition-all duration-300 hover:translate-x-1">
+                    <a
+                      href="#"
+                      className="hover:text-white transition-all duration-300 hover:translate-x-1"
+                    >
                       Warranty Setup
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-all duration-300 hover:translate-x-1">
+                    <a
+                      href="#"
+                      className="hover:text-white transition-all duration-300 hover:translate-x-1"
+                    >
                       Warranty Claims
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-all duration-300 hover:translate-x-1">
+                    <a
+                      href="#"
+                      className="hover:text-white transition-all duration-300 hover:translate-x-1"
+                    >
                       Contact Us
                     </a>
                   </li>
@@ -345,17 +402,26 @@ export default function HomePage() {
                 <h5 className="font-semibold mb-4">Legal</h5>
                 <ul className="space-y-2 text-gray-400">
                   <li>
-                    <a href="#" className="hover:text-white transition-all duration-300 hover:translate-x-1">
+                    <a
+                      href="#"
+                      className="hover:text-white transition-all duration-300 hover:translate-x-1"
+                    >
                       Privacy Policy
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-all duration-300 hover:translate-x-1">
+                    <a
+                      href="#"
+                      className="hover:text-white transition-all duration-300 hover:translate-x-1"
+                    >
                       Terms of Service
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-all duration-300 hover:translate-x-1">
+                    <a
+                      href="#"
+                      className="hover:text-white transition-all duration-300 hover:translate-x-1"
+                    >
                       Warranty Terms
                     </a>
                   </li>
@@ -369,5 +435,5 @@ export default function HomePage() {
         </footer>
       </div>
     </div>
-  )
+  );
 }
