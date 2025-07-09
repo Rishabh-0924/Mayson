@@ -98,7 +98,7 @@ export default function HomePage() {
               onClick={handleLogoClick}
             >
               <Shield className="h-8 w-8 text-white" />
-              <h1 className="text-2xl font-bold text-white">MASON</h1>
+              <h1 className="text-2xl font-bold text-white">MAYSON</h1>
             </div>
             <nav className="hidden md:flex space-x-8">
               <a
